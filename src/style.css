@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #0b0d15;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Phaser 的 Scale.FIT 以 #app 的尺寸为基准缩放画布，
+   因此这里必须显式撑满窗口，否则父节点高度为 0 会导致画布尺寸为 0。 */
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画布已按 RENDER_SCALE 以真实像素渲染（见 src/core/view.ts），
+   CSS 尺寸与画布像素尺寸基本 1:1，不再需要浏览器把 960×600 放大，
+   因此文字与像素边缘保持锐利。 */
+#app canvas {
+  display: block;
+}
