@@ -36,3 +36,9 @@ html = html.replace(/<link[^>]*rel="modulepreload"[^>]*>/g, '');
 
 fs.writeFileSync(outFile, html, 'utf8');
 console.log('已生成单文件 Demo:', outFile, `(${(fs.statSync(outFile).size / 1024).toFixed(0)} KB)`);
+
+// 同步一份到 docs/index.html，供 GitHub Pages 直接在线试玩
+const pagesDir = path.join(root, 'docs');
+fs.mkdirSync(pagesDir, { recursive: true });
+fs.writeFileSync(path.join(pagesDir, 'index.html'), html, 'utf8');
+console.log('已同步 GitHub Pages 版本: docs/index.html');

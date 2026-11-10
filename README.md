@@ -5,6 +5,9 @@
 
 > 当前版本为垂直切片 Demo：4 种玩法、7 名角色、2 个 PVE 关卡与 BOSS、装备成长系统。
 
+**在线试玩**：https://smallcastle2005.github.io/Brawl_Protocol/
+（如页面 404，请在仓库 Settings → Pages 中将 Source 设为 `main` 分支的 `/docs` 目录）
+
 ---
 
 ## 玩法
